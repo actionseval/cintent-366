@@ -16,8 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    # CINTENT >> INSERT_CINTENT
-    - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
+    # # CINTENT >> INSERT_CINTENT
+    # - uses: JavidDitty/setup-cintent@a606c80c34ec190c6a20dea33d6d58ddb6c4e0cc
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -35,10 +35,10 @@ jobs:
         ruff format --check --diff
         pytest tests
 
-    # CINTENT >> INSERT_CINTENT
-    - name: Upload CIntent Artifacts
-      uses: actions/upload-artifact@v4
-      if: always()
-      with:
-        name: ${{ env.CINTENT_ARTIFACT_NAME }}
-        path: ${{ env.CINTENT_LOGS }}
+    # # CINTENT >> INSERT_CINTENT
+    # - name: Upload CIntent Artifacts
+    #   uses: actions/upload-artifact@v4
+    #   if: always()
+    #   with:
+    #     name: ${{ env.CINTENT_ARTIFACT_NAME }}
+    #     path: ${{ env.CINTENT_LOGS }}
